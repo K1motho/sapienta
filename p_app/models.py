@@ -39,3 +39,9 @@ class SavedSAyings(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     saying = models.ForeignKey(Saying, on_delete=models.CASCADE)
     Saved_at = models.DateField(auto_now_add=True)
+
+class Reflections(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    saying = models.ForeignKey(Saying, on_delete=models.CASCADE)
+    context = models.TextField()
+    created_at = models.DateField(auto_now_add=True)
