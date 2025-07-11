@@ -35,7 +35,7 @@ class Saying (models.Model):
     def __str__(self):
         return f"{self.translation[:50]}..."
     
-class SavedSAyings(models.Model):
+class SavedSayings(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     saying = models.ForeignKey(Saying, on_delete=models.CASCADE)
     Saved_at = models.DateField(auto_now_add=True)
