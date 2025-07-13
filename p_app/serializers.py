@@ -7,11 +7,13 @@ class SayingSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class SavedSayingSerializer(serializers.ModelSerializer):
+    user = serializers.StringRelatedField(read_only=True)
     class Meta:
         model = SavedSayings
         fields = '__all__'
 
 class ReflectionSerializer(serializers.ModelSerializer):
+    user = serializers.StringRelatedField(read_only=True)
     class Meta:
         model = Reflections
         fields = '__all__'

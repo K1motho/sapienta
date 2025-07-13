@@ -3,18 +3,16 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class Tag(models.Model):
-    name = models.CharField(max_length=50, unique=True)
+# class Tag(models.Model):
+#     name = models.CharField(max_length=50, unique=True)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
     
 class Saying (models.Model):
     CULTURES = [
         ('Greek', 'Ancient Greek'),
         ('Hebrew', 'Hebrew'),
-        ('Latin', 'Latin'),
-        ('West African', 'West African'),
     ]
 
     TONES = [
